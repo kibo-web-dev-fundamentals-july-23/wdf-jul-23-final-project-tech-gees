@@ -1,14 +1,74 @@
-header{
-    background-color: #D2B48C;
-}
-
 body{
     padding: 0;
     margin: 0;
     height:100vh;
     justify-self: center;
     align-items: center;
-    background-color: beige;
+    background-color: #FFFFFF;
+}
+
+.container {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* flex-direction: column; */
+}
+
+header{
+    height: 100px;
+    background-color: #c9f1d5;
+}
+
+.logo img {
+    background-color: rgb(210, 208, 181);
+    margin-top: 40px;
+    width: 80px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+.menu-toggle {
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #4A383D;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.menu {
+    display: none;
+}
+
+/* Reset padding and margin for the ul element */
+ul.menu {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style your menu items (list items) */
+ul.menu li {
+    list-style: disc;
+    margin: 10px 0; /* Add spacing between menu items if needed */
+}
+
+/* Style the anchor links */
+ul.menu li a {
+    text-decoration: none;
+}
+
+.menu.active {
+    display: block;
 }
 
 .section{
@@ -133,14 +193,14 @@ body{
 }
 
 a{
-    margin-left: 1100PX;
+    margin-left: 900PX;
     text-decoration: none;
+    font-size: 20px;
     color: #4A383D;
-    border: solid #4A383D;
     padding: 4px;
 }
 footer{
-    background-color: #D2B48C;
+    background-color: #c9f1d5;
 }
 
 p{
