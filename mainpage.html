@@ -12,9 +12,44 @@
     <body>
         <div class="container">
             <header>
-                <div class="logo">
+                <div class="brand-logo">
                     <img src="images/LOGO.png" alt="Your Logo">
                 </div>
+                <div class="brand-tagline">...Crafting Thoughts, One Note at a Time</div>
+                <form action="search-results.html" method="get">
+                    <input type="text" name="q" id="search" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+                <div id="refresh-container">
+                    <button id="refresh-button">↻</button>
+                </div>
+                <div class="view-switcher">
+                    <button id="toggle-view">
+                        <i id="view-icon" class="fa fa-th-large"></i>
+                        <!-- You can use Font Awesome or another icon library for the icon -->
+                    </button>
+                </div>
+
+                <div class="content">
+                    <!-- Content for both grid and list views -->
+                    <div class="grid-view">
+                        <!-- Your grid items here -->
+                    </div>
+
+                    <div class="list-view" style="display: none;"> <!-- Initially hidden -->
+                        <!-- Your list items here -->
+                        <div class="list-item">
+                            <div class="item-icon">
+                                <!-- Icon goes here (e.g., Font Awesome icon) -->
+                            </div>
+                            <div class="item-text">
+                                <!-- Text content of the list item -->
+                            </div>
+                        </div>
+                        <!-- Add more list items as needed -->
+                    </div>
+                </div>
+
                 <div class="menu-toggle">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -22,8 +57,8 @@
                 </div>
                 <nav class="menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">trash</a></li>
                         <li><a href="#">Services</a></li>
                     </ul>
                 </nav>

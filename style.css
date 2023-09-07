@@ -20,12 +20,114 @@ header{
     background-color: #c9f1d5;
 }
 
-.logo img {
-    background-color: rgb(210, 208, 181);
+.brand-logo img {
+    /* background-color: rgb(210, 208, 181); */
     margin-top: 40px;
     width: 80px;
     height: 50px;
     margin-left: 50px;
+}
+
+.brand-tagline{
+    margin-left: 140px;
+    margin-top: -20px;
+    font-style: italic;
+    color: #4A383D;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    margin-left: 600px;
+    margin-top: -40px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #4f7a5c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #518478;
+}
+
+#refresh-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #4f7a5c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 950px;
+    margin-top: -45px;
+}
+
+#refresh-button {
+    color: white;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#refresh-container:hover{
+    transform: rotate(90deg);
+    background-color: #518478;
+}
+
+/* Style for the view switcher buttons */
+.view-switcher button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+/* Style for the grid and list views */
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.list-view {
+    display: none;
+}
+
+.list-view .list-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd; /* Add a border between list items */
+    padding: 10px;
+}
+
+.list-view .list-item .item-text {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.list-view .list-item .item-icon {
+    width: 24px;
+    height: 24px;
+    color: #333;
 }
 
 .menu-toggle {
