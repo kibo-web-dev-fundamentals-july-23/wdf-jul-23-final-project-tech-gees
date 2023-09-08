@@ -8,11 +8,9 @@ body{
 }
 
 .container {
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* flex-direction: column; */
 }
 
 header{
@@ -21,7 +19,6 @@ header{
 }
 
 .brand-logo img {
-    /* background-color: rgb(210, 208, 181); */
     margin-top: 40px;
     width: 80px;
     height: 50px;
@@ -93,7 +90,6 @@ button[type="submit"]:hover {
     background-color: #518478;
 }
 
-/* Style for the view switcher buttons */
 .view-switcher button {
     padding: 5px 10px;
     cursor: pointer;
@@ -101,7 +97,6 @@ button[type="submit"]:hover {
     background-color: transparent;
 }
 
-/* Style for the grid and list views */
 .grid-view {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -150,7 +145,6 @@ button[type="submit"]:hover {
     display: none;
 }
 
-/* Reset padding and margin for the ul element */
 ul.menu {
     text-align: left;
     list-style: none;
@@ -158,13 +152,11 @@ ul.menu {
     margin: 0;
 }
 
-/* Style your menu items (list items) */
 ul.menu li {
     list-style: disc;
-    margin: 10px 0; /* Add spacing between menu items if needed */
+    margin: 10px 0;
 }
 
-/* Style the anchor links */
 ul.menu li a {
     text-decoration: none;
 }
@@ -213,7 +205,6 @@ ul.menu li a {
     position: absolute;
     width: 800px;
     margin-top: -40px;
-    justify-content: 10;
     display: flex;
     justify-content: center;
 }

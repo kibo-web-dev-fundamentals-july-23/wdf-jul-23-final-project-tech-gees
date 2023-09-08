@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scale=yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="mobile-web-app-capable" content="yes">
         <title>Quick Jotter</title>
         <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="script.js"></script>
+        <!-- <script type="text/javascript" src="script.js"></script> -->
     </head>
     <body>
         <div class="container">
@@ -27,7 +27,7 @@
                         <input type="radio" name="radio-btn" id="radio5">
 
                         <div class="st first">
-                            <img src="images/quick%20jotter%20logo.jpg" alt="Your Logo">
+                            <img src="images/quick jotter logo.jpg" alt="brand design">
                         </div>
 
                         <div class="st">
@@ -64,11 +64,22 @@
                     </div>
                 </div>
             </section>
-            <main></main>
             <a href="mainpage.html" class="get-started-link"><strong>GET STARTED<span>&rarr;</span></strong></a>
             <footer>
                 <p>&copy; 2023 QUICK JOTTER</p>
             </footer>
         </div>
+        <script type="text/javascript">
+            var counter=1;
+            setInterval(function(){
+                console.log('Before checking radio' + counter);
+                document.getElementById('radio' + counter).checked=true;
+                console.log('After checking radio' + counter);
+                counter++
+                if(counter >5){
+                    counter = 1;
+                }
+            },5000)
+        </script>
     </body>
 </html>
