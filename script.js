@@ -27,28 +27,46 @@ refreshButton.addEventListener("click", function() {
     location.reload();
 });
 
-const toggleButton = document.getElementById("toggle-view");
-const viewIcon = document.getElementById("view-icon");
-const gridView = document.querySelector(".grid-view");
-const listView = document.querySelector(".list-view");
+// const toggleButton = document.getElementById("toggle-view");
+// const viewIcon = document.getElementById("view-icon");
+// const gridView = document.querySelector(".grid-view");
+// const listView = document.querySelector(".list-view");
 
-let isGridView = true;
+// let isGridView = true;
 
-toggleButton.addEventListener("click", function () {
-    if (isGridView) {
-        // Switch to list view
-        gridView.style.display = "none";
-        listView.style.display = "block";
-        viewIcon.classList.remove("fa-th-large");
-        viewIcon.classList.add("fa-list");
-    } else {
-        // Switch to grid view
-        gridView.style.display = "grid";
-        listView.style.display = "none";
-        viewIcon.classList.remove("fa-list");
-        viewIcon.classList.add("fa-th-large");
-    }
+// toggleButton.addEventListener("click", function () {
+//     if (isGridView) {
+//         // Switch to list view
+//         gridView.style.display = "none";
+//         listView.style.display = "block";
+//         viewIcon.classList.remove("fa-th-large");
+//         viewIcon.classList.add("fa-list");
+//     } else {
+//         // Switch to grid view
+//         gridView.style.display = "grid";
+//         listView.style.display = "none";
+//         viewIcon.classList.remove("fa-list");
+//         viewIcon.classList.add("fa-th-large");
+//     }
 
-    // Toggle the view state
-    isGridView = !isGridView;
+//     // Toggle the view state
+//     isGridView = !isGridView;
+// });
+
+
+// Get references to the textarea and save button
+const textarea = document.getElementById('user-text');
+const saveButton = document.getElementById('save-button');
+
+// Function to save the text to local storage
+saveButton.addEventListener('click', function () {
+    const userText = textarea.value;
+    localStorage.setItem('userText', userText);
+    alert('Text saved successfully!');
 });
+
+// Check if there's saved text and display it
+const savedText = localStorage.getItem('userText');
+if (savedText) {
+    textarea.value = savedText;
+}

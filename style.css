@@ -35,16 +35,17 @@ header{
 form {
     display: flex;
     align-items: center;
-    margin-left: 600px;
-    margin-top: -40px;
+    margin-left: 310px;
+    margin-top: 40px;
 }
 
 input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 20px;
+    border: 2px solid #ccc;
     border-radius: 5px;
     outline: none;
     font-size: 16px;
+    width: 500px;
 }
 
 button[type="submit"] {
@@ -72,8 +73,7 @@ button[type="submit"]:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-left: 950px;
-    margin-top: -45px;
+    margin-left: 20px;
 }
 
 #refresh-button {
@@ -90,30 +90,6 @@ button[type="submit"]:hover {
     background-color: #518478;
 }
 
-.view-switcher button {
-    padding: 5px 10px;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-}
-
-.grid-view {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.list-view {
-    display: none;
-}
-
-.list-view .list-item {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ddd; /* Add a border between list items */
-    padding: 10px;
-}
-
 .list-view .list-item .item-text {
     flex-grow: 1;
     margin-left: 10px;
@@ -125,9 +101,53 @@ button[type="submit"]:hover {
     color: #333;
 }
 
+.settings-icon i {
+    color: #FF5733;
+    background-color: #4A383D;
+    font-size: 24px;
+    display: inline-block;
+    visibility: visible;
+    padding: 50px;
+    border: 50px;
+    margin: 50px;
+    size: 50px;
+}
+
+.text-editor {
+    border: 0;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block;
+}
+
+textarea {
+    width: 50%;
+    height: 90px;
+    resize: none;
+    margin-left: 250px;
+    justify-content: center;
+}
+
+button {
+    background-color: #4f7a5c;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #518478;
+}
+
+#save-button{
+    padding: 10px 10px;
+    margin-top: -200px;
+    margin-left: 900px;
+}
+
 .menu-toggle {
     margin-top: -50px;
-    display: flex;
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
