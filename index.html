@@ -7,15 +7,15 @@
         <meta name="mobile-web-app-capable" content="yes">
         <title>Quick Jotter</title>
         <link rel="stylesheet" href="style.css">
-        <!-- <script type="text/javascript" src="script.js"></script> -->
+
     </head>
     <body>
         <div class="container">
             <header>
                 <div class="brand-logo">
                     <img src="images/LOGO.png" alt="Your Logo">
+                    <p class="brand-tagline">...Crafting Thoughts, One Note at a Time </p>
                 </div>
-                <div class="brand-tagline">...Crafting Thoughts, One Note at a Time</div>
             </header>
             <section class="section">
                 <div class="slider">
@@ -69,17 +69,6 @@
                 <p>&copy; 2023 QUICK JOTTER</p>
             </footer>
         </div>
-        <script type="text/javascript">
-            var counter=1;
-            setInterval(function(){
-                console.log('Before checking radio' + counter);
-                document.getElementById('radio' + counter).checked=true;
-                console.log('After checking radio' + counter);
-                counter++
-                if(counter >5){
-                    counter = 1;
-                }
-            },5000)
-        </script>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>

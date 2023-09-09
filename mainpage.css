@@ -1,0 +1,148 @@
+/* Styles for the hamburger icon */
+header{
+    display: flex;
+    flex-direction: row;
+    border-bottom:1px solid #646262;
+    margin-left: 10px;
+}
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.bar {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Styles for the hidden menu */
+.menu {
+    display: none;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* style for the logo and tagline */
+.brand-logo{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.brand-logo img {
+    width: 60px;
+    height: 30px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+.brand-tagline{
+    font-size: 10px;
+    margin: 0;
+}
+
+/* Styles for the search container */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 20px; /* Apply border radius */
+    padding: 5px;
+    width: 600px; /* Adjust the width as needed */
+    /* height: 20px; */
+    margin-left: 90px;
+    margin-bottom: 1px;
+}
+
+/* Styles for the search input */
+.search-container input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px; /* Apply border radius to match the container */
+}
+
+/* Styles for the search button */
+.search-button {
+    /* background-color: #4f7a5c; */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Apply border radius */
+     cursor: pointer;
+    /* padding: 10px; */
+    /* margin-left: 5px; */
+    padding: 0;
+    margin: 0;
+}
+
+.search-button img{
+    width: 50px;
+    height: 50px;
+}
+
+/* for refresh icon */
+#refresh-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 90px;
+    align-self: center;
+}
+
+#refresh-button {
+    color: rgb(41, 36, 36);
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#refresh-container:hover{
+    transform: rotate(90deg);
+    background-color: #518478;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+.text-editor {
+    border: 0;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block;
+}
+
+#user-text {
+    width: 50%;
+    height: 90px;
+    resize: none;
+    margin-left: 250px;
+    justify-content: center;
+}

@@ -15,7 +15,7 @@ body{
 
 header{
     height: 100px;
-    background-color: #c9f1d5;
+    background-color: rgb(203, 144, 36);
 }
 
 .brand-logo img {
@@ -120,7 +120,7 @@ button[type="submit"]:hover {
     display: block;
 }
 
-textarea {
+#user-text {
     width: 50%;
     height: 90px;
     resize: none;

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <title>Quick Jotter</title>
+        <link rel="stylesheet" href="mainpage.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="menu-toggle" id="menuToggle">
+                    <!-- This div represents the hamburger icon -->
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <div class="brand-logo">
+                    <img src="images/LOGO.png" alt="Your Logo">
+                    <p class="brand-tagline">...Crafting Thoughts, One Note at a Time </p>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit" class="search-button">
+                        <img src="images/search-icon.png" alt="Search">
+                    </button>
+                </div>
+                <div id="refresh-container">
+                    <button id="refresh-button">↻</button>
+                </div>
+            </header>
+            <main>
+                <nav class="menu" id="menu">
+                    <!-- This is the hidden menu that appears when the hamburger is clicked -->
+                    <ul>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Starred</a></li>
+                        <li><a href="#">Trash</a></li>
+                    </ul>
+                </nav>
+                <div class="text-container">
+                    <input type="text" id="textbox" name="textbox" placeholder="Write Something Here...">
+                    <textarea id="myTextarea" style="width:300px;" rows="1" placeholder="Enter your text here..."></textarea>
+                </div>
+
+            </main>
+        </div>
+        <footer>
+            <p>&copy; 2023 QUICK JOTTER</p>
+        </footer>
+    </body>
+    <script type="text/javascript" src="main-page.js"></script>
+</html>
