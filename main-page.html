@@ -7,50 +7,71 @@
         <meta name="mobile-web-app-capable" content="yes">
         <title>Quick Jotter</title>
         <link rel="stylesheet" href="mainpage.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <header>
-                <div class="menu-toggle" id="menuToggle">
-                    <!-- This div represents the hamburger icon -->
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-
-                <div class="brand-logo">
-                    <img src="images/LOGO.png" alt="Your Logo">
-                    <p class="brand-tagline">...Crafting Thoughts, One Note at a Time </p>
-                </div>
-                <div class="search-container">
-                    <input type="text" placeholder="Search...">
-                    <button type="submit" class="search-button">
-                        <img src="images/search-icon.png" alt="Search">
-                    </button>
-                </div>
-                <div id="refresh-container">
-                    <button id="refresh-button">↻</button>
-                </div>
-            </header>
-            <main>
+        <div class="grid-container">
+            <div class="item1">
+                <header>
+                    <div class="menu-toggle" id="menuToggle">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="brand-logo">
+                        <img src="images/LOGO.png" alt="Your Logo">
+                    </div>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit" class="search-button">
+                            <img src="images/search-icon.png" alt="Search">
+                        </button>
+                    </div>
+                    <div id="refresh-container">
+                        <button id="refresh-button">↻</button>
+                    </div>
+                </header>
+            </div>
+            <div class="item2">
                 <nav class="menu" id="menu">
-                    <!-- This is the hidden menu that appears when the hamburger is clicked -->
                     <ul>
                         <li><a href="#">Categories</a></li>
                         <li><a href="#">Starred</a></li>
                         <li><a href="#">Trash</a></li>
                     </ul>
                 </nav>
-                <div class="text-container">
-                    <input type="text" id="textbox" name="textbox" placeholder="Write Something Here...">
-                    <textarea id="myTextarea" style="width:300px;" rows="1" placeholder="Enter your text here..."></textarea>
-                </div>
-
-            </main>
+            </div>
+            <div class="item3">
+                <main>
+                    <div class="text-container">
+                        <div class="input-box">
+                            <input type="text" id="textbox" name="textbox" placeholder="Write Something Here...">
+                        </div>
+                        <div class="text-area">
+                            <div class="text-editor">
+                                <button class="format-button" id="bold-button"><i class="material-icons">format_bold</i></button>
+                                <button class="format-button" id="italic-button"><i class="material-icons">format_italic</i></button>
+                                <button class="format-button" id="strikethrough-button"><i class="material-icons">strikethrough_s</i></button>
+                                <button class="icon-button"><i class="material-icons">check_box</i></button>
+                                <button id="star-button" class="icon-button star"><i class="material-icons">star</i></button>
+                                <button class="icon-button"><i class="material-icons">local_offer</i></button>
+                                <button class="icon-button"><i class="material-icons">save</i></button>
+                            </div>
+                            <div class="editable-text" contenteditable="true">
+                                <input type="text" id="title" name="title" placeholder="Title">
+                                <textarea id="myTextarea"  rows="4" placeholder="Enter your text here..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="note-container"></div>
+                </main>
+            </div>
+            <div class="item4">
+                <footer>
+                    <p>&copy; 2023 QUICK JOTTER</p>
+                </footer>
+            </div>
         </div>
-        <footer>
-            <p>&copy; 2023 QUICK JOTTER</p>
-        </footer>
     </body>
     <script type="text/javascript" src="main-page.js"></script>
 </html>
