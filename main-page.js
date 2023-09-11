@@ -95,13 +95,16 @@ saveButton.addEventListener("click", function() {
 
     if (title && content) {
         addNote(title, content);
-
         // Clear the input fields after adding the note
         titleInput.value = "";
         contentTextarea.value = "";
+        textArea.style.display = "none"
+        inputBox.style.display ="block"
     } else {
       noOutput.style.display = "block"
       textContainer.style.marginTop = "10px"
+      textArea.style.display = "none"
+      inputBox.style.display ="block"
 
       noOutput.textContent = "Please Enter A Title and Text To Save"
     }
@@ -214,14 +217,14 @@ function searchNotes() {
 //   }
 // }
 
-// // Add an event listener for the search icon click event
-// const searchButton = document.querySelector(".search-button");
-// searchButton.addEventListener("click", searchNotes);
+// Add an event listener for the search icon click event
+const searchButton = document.querySelector(".search-button");
+searchButton.addEventListener("click", searchNotes);
 
-// // Add an event listener for the Enter key press event
-// const searchInput = document.getElementById("searchInput");
-// searchInput.addEventListener("keydown", function (event) {
-//   if (event.key === "Enter") {
-//       searchNotes();
-//   }
-// });
+// Add an event listener for the Enter key press event
+const searchInput = document.getElementById("searchInput");
+searchInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+      searchNotes();
+  }
+});

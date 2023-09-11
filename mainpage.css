@@ -114,7 +114,7 @@ header{
 .search-container {
     display: flex;
     align-items: center;
-    border: 2px solid #ccc;
+    border: 2px solid #aba6a6;
     border-radius: 20px;
     width: 600px;
     margin: 10px 0 10px 90px;
@@ -236,11 +236,13 @@ main{
     padding: 10px;
     margin: 5px;
     width: 500px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
 
 }
 
 .input-box{
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .input-box input::placeholder, .editable-text input::placeholder {
@@ -342,10 +344,11 @@ input[type="checkbox"] {
     column-count: 1; /* Adjust the number of columns as needed */
     column-width: 200px; /* Adjust the width as needed */
     /* Optional: Add more styles like margin, padding, etc. */
+    margin-bottom: 70px;
   }
 
   .notes {
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
@@ -367,12 +370,13 @@ input[type="checkbox"] {
 
    .search-results {
     display: none;
-    width: 400px;
+    width: 700px;
     margin: 20px auto;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
     text-align: left;
+    margin-bottom: 70px;
   }
 
   .no-output{
@@ -380,7 +384,7 @@ input[type="checkbox"] {
     width: 400px;
     margin: 20px auto 10px auto;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 10px;
     font-weight: bold;
     font-size: medium;
@@ -392,7 +396,7 @@ input[type="checkbox"] {
   }
 
   .note {
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
