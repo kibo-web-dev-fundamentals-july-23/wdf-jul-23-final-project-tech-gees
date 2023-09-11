@@ -5,6 +5,7 @@ html, body {
 body {
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
 }
 
 .item1 { grid-area: header; }
@@ -45,8 +46,12 @@ header{
 }
 
 /* Styles for the hidden menu */
+/* Styles for the hidden menu */
 .menu {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    margin-left: 15px;
 }
 
 .menu.active {
@@ -55,7 +60,6 @@ header{
 }
 
 .item2{
-    background-color: white;
     padding: 0;
     margin: 0;
 }
@@ -63,17 +67,36 @@ header{
 .menu ul {
     list-style-type: none;
     padding: 0;
+    margin: 4px;
 }
 
 .menu li {
-    padding: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 30px;
+    overflow: hidden;
+    transition: width 0.2s ease;
 }
 
-.menu a {
+.menu li img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.menu li a {
     text-decoration: none;
     color: #333;
 }
 
+.menu li:hover {
+    background-color: burlywood;
+    width: 100px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
 /* style for the logo and tagline */
 .brand-logo{
     margin-top: 20px;
@@ -159,10 +182,11 @@ header{
 main{
     display: flex;
     flex-direction: column;
+
 }
 
 .text-container{
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .text-editor {
     border: 0;
@@ -174,6 +198,7 @@ main{
 .text-editor{
     border-bottom:1px solid black;
     margin-bottom: 10px;
+    justify-content: space-evenly;
 }
 
 /* Initially hide the .text-area */
@@ -181,12 +206,9 @@ main{
     display: none;
     border: 1px solid black;
     border-radius: 4px;
+    width: 500px;
+    margin: 0 auto;
 
-}
-
-.text-editor {
-    display: flex;
-    align-items: center;
 }
 
 .editable-text input{
@@ -311,11 +333,62 @@ input[type="checkbox"] {
   /* list of notes */
 
   #note-container {
+    display: none;
+    width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    column-count: 1; /* Adjust the number of columns as needed */
+    column-width: 200px; /* Adjust the width as needed */
+    /* Optional: Add more styles like margin, padding, etc. */
+  }
+
+  .notes {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  .note-title {
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .note-date {
+    font-size: 12px;
+    color: #3c3a3a;
+  }
+
+   .search-results {
+    display: none;
     width: 400px;
     margin: 20px auto;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    text-align: left;
+  }
+
+  .no-output{
+    display: none;
+    width: 400px;
+    margin: 20px auto 10px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+  .search-results h3{
+    font-size: medium;
+    font-weight: bold;
   }
 
   .note {
@@ -328,14 +401,14 @@ input[type="checkbox"] {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .note-title {
+  .note h3 {
     font-weight: bold;
     font-size: large;
   }
 
-  .note-date {
-    font-size: 12px;
-    color: #3c3a3a;
+  .note p {
+    font-size: medium;
+    color: black;
   }
 
 /* FOOTER */
