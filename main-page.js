@@ -1,4 +1,4 @@
-// for the hamburger
+// THIS IS FOR THE HAMBURGER...
 
 // Get references to the menu elements
 const menuToggle = document.getElementById("menuToggle");
@@ -13,6 +13,20 @@ menuToggle.addEventListener("click", function() {
 });
 
 
+// THIS IS FOR THE REFRESH BUTTON...
+
+// Get a reference to the refresh button
+const refreshButton = document.getElementById("refresh-button");
+
+// Add a click event listener to the button
+refreshButton.addEventListener("click", function () {
+    // Use the location object to reload the page
+    location.reload();
+});
+
+
+
+// THIS IS FOR THE TEXT AREA...
 const textarea = document.getElementById('myTextarea');
 
 textarea.addEventListener('input', function () {
@@ -45,7 +59,7 @@ document.getElementById("text-area").addEventListener("blur", function () {
 
 
 
-// This code will automatically adjust the height of the textarea as you type, increasing it to fit the content while keeping the width fixed at 300 pixels.
+// THIS IS FOR THE ICONS INSIDE THE TEXT AREA...
 
 // buttons in the text box
 const boldButton = document.getElementById("bold-button");
