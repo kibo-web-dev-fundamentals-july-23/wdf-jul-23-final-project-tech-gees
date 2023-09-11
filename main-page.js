@@ -172,7 +172,7 @@ function addNote(title, content) {
       deleteIcon.textContent = "delete";
       console.log("delete icon created")
       deleteIcon.addEventListener("click", function () {
-          deleteNoteAndMoveToTrash(noteContainer, note);
+          deleteNoteAndMoveToTrash(noteDiv, note);
       });
 
 
