@@ -34,7 +34,7 @@ header{
     display: block;
     cursor: pointer;
     margin-top: 40px;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .bar {
@@ -46,17 +46,16 @@ header{
 }
 
 /* Styles for the hidden menu */
-/* Styles for the hidden menu */
 .menu {
-    display: flex;
+    display: none;
     flex-direction: column;
-    width: 0;
+    width: 200px;
     margin-left: 15px;
 }
 
 .menu.active {
-    display: block;
-    padding: 0;
+    display: flex;
+    padding: 0px;
 }
 
 .item2{
@@ -71,13 +70,13 @@ header{
 }
 
 .menu li {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    width: 30px;
-    overflow: hidden;
-    transition: width 0.2s ease;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  width: 10px;
+  overflow: hidden;
+  transition: width 0.2s ease;
 }
 
 .menu li img{
@@ -94,9 +93,11 @@ header{
 .menu li:hover {
     background-color: burlywood;
     width: 100px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-left: 0;
 }
+
 /* style for the logo and tagline */
 .brand-logo{
     margin-top: 20px;
@@ -127,18 +128,15 @@ header{
     outline: none;
     padding: 10px;
     font-size: medium;
-    border-radius: 20px; /* Apply border radius to match the container */
+    border-radius: 20px;
 }
 
 /* Styles for the search button */
 .search-button {
-    /* background-color: #4f7a5c; */
     color: #fff;
     border: none;
-    border-radius: 20px; /* Apply border radius */
+    border-radius: 20px;
      cursor: pointer;
-    /* padding: 10px; */
-    /* margin-left: 5px; */
     padding: 0;
     margin: 0;
 }
@@ -172,7 +170,7 @@ header{
 }
 
 #refresh-container:hover{
-    /* transform: rotate(90deg); */
+    transform: rotate(90deg);
     background-color: burlywood;
     align-items: center;
     justify-content: center;
@@ -208,7 +206,6 @@ main{
     border-radius: 4px;
     width: 500px;
     margin: 0 auto;
-
 }
 
 .editable-text input{
@@ -228,7 +225,6 @@ main{
     border: none;
 }
 
-/* Remove the border (outline) on input and textarea when focused */
 .editable-text input:focus, textarea:focus {
     outline: none;
 }
@@ -299,7 +295,7 @@ input[type="checkbox"] {
  .text-editor {
     display: flex;
     align-items: center;
-    gap: 10px; /* Equal spacing between buttons/icons */
+    gap: 10px;
   }
 
   .format-button,
@@ -307,29 +303,29 @@ input[type="checkbox"] {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px; /* Adjust padding as needed */
+    padding: 5px;
   }
 
  /* Add a class to select the star button */
 .icon-button.star {
-    background-color: white; /* Set the background color to white */
-    color: black; /* Set the text (icon) color to a different color (e.g., orange) */
-    border: none; /* Remove any borders */
-    padding: 5px; /* Adjust padding as needed */
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px;
     cursor: pointer;
-    border-radius: 50%; /* Make the button circular */
+    border-radius: 50%;
   }
 
   /* Style the button when it's in the "starred" state */
   .icon-button.star.starred {
-    background-color: white; /* Change the background color when starred */
-    color: orange; /* Change the text (icon) color when starred */
+    background-color: white;
+    color: orange;
   }
 
 
   .format-button:hover, .icon-button:hover {
-    background-color: #eee; /* Add a background color on hover for icons */
-    border-radius: 50%; /* Make the icon buttons circular */
+    background-color: #eee;
+    border-radius: 50%;
   }
 
   /* list of notes */
@@ -341,9 +337,8 @@ input[type="checkbox"] {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    column-count: 1; /* Adjust the number of columns as needed */
-    column-width: 200px; /* Adjust the width as needed */
-    /* Optional: Add more styles like margin, padding, etc. */
+    column-count: 1;
+    column-width: 200px;
     margin-bottom: 70px;
   }
 

@@ -12,6 +12,14 @@ menuToggle.addEventListener("click", function() {
     menu.classList.toggle("active"); // Toggle the "active" class on the menu
 });
 
+menuToggle.addEventListener("click", function() {
+  console.log("Hamburger clicked!"); // Add this line
+  menu.classList.toggle("active");
+});
+
+menuToggle.addEventListener('click', function() {
+  menu.classList.toggle('active');
+});
 
 // THIS IS FOR THE REFRESH BUTTON...
 
@@ -57,6 +65,15 @@ document.getElementById("text-area").addEventListener("blur", function () {
     textArea.style.display = "none";
 });
 
+// Add a click event listener to the document
+document.addEventListener("click", function (event) {
+    // Check if the click event target is not inside the text container
+    if (!textContainer.contains(event.target)) {
+        // Clicked outside the text container, hide the text area and show the input box
+        textArea.style.display = "none";
+        inputBox.style.display = "block";
+    }
+});
 
 
 // THIS IS FOR THE ICONS INSIDE THE TEXT AREA...
