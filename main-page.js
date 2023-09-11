@@ -42,6 +42,15 @@ textarea.addEventListener('input', function () {
     this.style.height = (this.scrollHeight) + 'px';  // Set the height to match the content
 });
 
+
+// Function to open the note in an editable text box
+function openNoteInEditableTextBox(title, content) {
+  titleInput.value = title;
+  contentTextarea.value = content;
+  textArea.style.display = "block";
+  inputBox.style.display = "none";
+}
+
 // // This code will automatically adjust the height of the textarea as you type, increasing it to fit the content while keeping the width fixed at 300 pixels.
 
 // Get references to the input-box and text-area
@@ -79,23 +88,6 @@ document.addEventListener("click", function (event) {
 // THIS IS FOR THE ICONS INSIDE THE TEXT AREA...
 
 // buttons in the text box
-const boldButton = document.getElementById("bold-button");
-const italicButton = document.getElementById("italic-button");
-const strikethroughButton = document.getElementById("strikethrough-button");
-const editableText = document.querySelector(".editable-text");
-
-boldButton.addEventListener("click", () => {
-  document.execCommand("bold", false, null);
-});
-
-italicButton.addEventListener("click", () => {
-  document.execCommand("italic", false, null);
-});
-
-strikethroughButton.addEventListener("click", () => {
-  document.execCommand("strikethrough", false, null);
-});
-
 const starButton = document.getElementById("star-button");
 let isStarred = false;
 
@@ -172,16 +164,8 @@ function addNote(title, content) {
     notes.push(note)
 }
 
+// FOR THE SEARCH FUNCTION...
 
-
-
-// function getFirstSentence(text) {
-//   const sentences = text.split(/[.!?]/); // Split the text into sentences
-//   if (sentences.length > 0) {
-//       return sentences[0].trim(); // Return the first sentence
-//   }
-//   return text; // If no sentences are found, return the entire text
-// }
 // Function to perform the search
 function searchNotes() {
   // Get the search input value
@@ -211,42 +195,6 @@ function searchNotes() {
   })
 }
 }
-
-
-
-//new
-// function searchNotes() {
-//   // Get the search input value
-//   const searchInput = document.getElementById("searchInput").value.toLowerCase();
-
-//   // Select the note container and search results elements
-//   const noteContainer = document.querySelector(".note-container");
-//   const searchResults = document.querySelector(".search-results");
-
-//   // Filter the notes based on the search input
-//   const noteElements = noteContainer.querySelectorAll(".note");
-//   const filteredNotes = Array.from(noteElements).filter(noteElement => {
-//       const title = noteElement.querySelector(".note-title").textContent.toLowerCase();
-//       return title.includes(searchInput);
-//   });
-
-//   // Clear any previous results or error messages
-//   searchResults.innerHTML = "";
-
-//   if (filteredNotes.length === 0) {
-//       // No matching notes found, display an error message
-//       noteContainer.style.display = "none";
-//       searchResults.style.display = "block";
-//       searchResults.innerHTML = "<h3>No matching notes found.</h3>";
-//   } else {
-//       // Display the matching notes
-//       noteContainer.style.display = "none";
-//       searchResults.style.display = "block";
-//       filteredNotes.forEach(noteElement => {
-//           searchResults.appendChild(noteElement.cloneNode(true));
-//       });
-//   }
-// }
 
 // Add an event listener for the search icon click event
 const searchButton = document.querySelector(".search-button");

@@ -50,17 +50,10 @@ header{
     display: none;
     flex-direction: column;
     width: 200px;
-    margin-left: 15px;
 }
 
 .menu.active {
     display: flex;
-    padding: 0px;
-}
-
-.item2{
-    padding: 0;
-    margin: 0;
 }
 
 .menu ul {
@@ -95,7 +88,6 @@ header{
     width: 100px;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-    margin-left: 0;
 }
 
 /* style for the logo and tagline */
@@ -186,14 +178,12 @@ main{
 .text-container{
     margin-top: 30px;
 }
+
 .text-editor {
     border: 0;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
     display: block;
-}
-
-.text-editor{
     border-bottom:1px solid black;
     margin-bottom: 10px;
     justify-content: space-evenly;
@@ -258,21 +248,8 @@ button {
   cursor: pointer;
   margin-right: 10px;
 }
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-}
-
-.checkbox-custom {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #000;
-  border-radius: 3px;
-  display: inline-block;
-  margin-left: 5px;
-  position: relative;
+.text-editor-buttons{
+  margin-left: auto;
 }
 
 input[type="checkbox"] {
@@ -280,22 +257,10 @@ input[type="checkbox"] {
   position: absolute;
 }
 
-/* input[type="checkbox"]:checked + .checkbox-custom::before {
-  content: 'check'; /* Material Icons name for a checkmark
-  font-family: 'Material Icons';
-  font-size: 16px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: green;
-}
- */
-
  .text-editor {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    justify-content: flex-end;
+    /* gap: 10px; */
   }
 
   .format-button,
